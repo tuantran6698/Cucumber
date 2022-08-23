@@ -1,0 +1,99 @@
+{
+  "商品から選ぶ": [
+    {
+      "menuItemLevel2": "抹茶",
+      "expected": "抹茶"
+    },
+    {
+      "menuItemLevel2": "ほうじ茶粉末",
+      "expected": "ほうじ茶粉末"
+    },
+    {
+      "menuItemLevel2": "アイスなど",
+      "expected": "アイス・シャーベット他"
+    },
+    {
+      "menuItemLevel2": "抹茶",
+      "menuItemLevel3": "無糖抹茶",
+      "expected": "無糖抹茶"
+    },
+    {
+      "menuItemLevel2": "抹茶",
+      "menuItemLevel3": "加糖抹茶",
+      "expected": "加糖抹茶"
+    },
+    {
+      "menuItemLevel2": "抹茶",
+      "menuItemLevel3": "無糖抹茶(ダマになりにくい)",
+      "expected": "無糖抹茶（ダマになりにくい）"
+    },
+    {
+      "menuItemLevel2": "ほうじ茶粉末",
+      "menuItemLevel3": "無糖ほうじ茶粉末",
+      "expected": "無糖ほうじ茶粉末"
+    },
+    {
+      "menuItemLevel2": "ほうじ茶粉末",
+      "menuItemLevel3": "加糖ほうじ茶粉末",
+      "expected": "加糖ほうじ茶粉末"
+    },
+    {
+      "menuItemLevel2": "紅茶",
+      "expected": "紅茶"
+    },
+    {
+      "menuItemLevel2": "アイスなど",
+      "menuItemLevel3": "アイス・シャーベット",
+      "expected": "アイス・シャーベット"
+    },
+    {
+      "menuItemLevel2": "アイスなど",
+      "menuItemLevel3": "菓子",
+      "expected": "菓子"
+    },
+    {
+      "menuItemLevel2": "アイスなど",
+      "menuItemLevel3": "その他(青汁など)",
+      "expected": "その他（青汁など）"
+    },
+    {
+      "menuItemLevel2": "全商品一覧",
+      "expected": "すべての商品"
+    }
+  ],
+  "用途から選ぶ": [
+    {
+      "menuItemLevel2": "ドリンク",
+      "menuItemLevel3": "タピオカ",
+      "expected": "タピオカドリンク"
+    },
+    {
+      "menuItemLevel2": "ドリンク",
+      "menuItemLevel3": "ラテ・チャイ",
+      "expected": "ラテ・チャイ"
+    },
+    {
+      "menuItemLevel2": "和・洋菓子、パン",
+      "menuItemLevel3": "和菓子",
+      "expected": "和菓子"
+    },
+    {
+      "menuItemLevel2": "和・洋菓子、パン",
+      "menuItemLevel3": "洋菓子",
+      "expected": "洋菓子"
+    },
+    {
+      "menuItemLevel2": "和・洋菓子、パン",
+      "menuItemLevel3": "パン",
+      "expected": "パン"
+    },
+    {
+      "menuItemLevel2": "割材",
+      "expected": "割材"
+    },
+    {
+      "menuItemLevel2": "トッピング",
+      "expected": "トッピング"
+    }
+  ]
+}
