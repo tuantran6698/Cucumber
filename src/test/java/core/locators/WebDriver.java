@@ -15,9 +15,9 @@ public class WebDriver {
         switch (browserName) {
             case "Chrome":
                 System.setProperty("webdriver.chrome.driver", Utilities.getProjectPath() + "\\drivers\\chromedriver.exe");
-//                ChromeOptions options = new ChromeOptions();
-//                options.addArguments("--headless");
-                WEBDRIVER = new ChromeDriver();
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("--headless");
+                WEBDRIVER = new ChromeDriver(options);
                 break;
             case "Firefox":
                 System.setProperty("webdriver.gecko.driver", Utilities.getProjectPath() + "\\drivers\\geckodriver.exe");
