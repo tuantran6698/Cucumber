@@ -17,7 +17,7 @@ public class WebDriver {
                 System.setProperty("webdriver.chrome.driver", Utilities.getProjectPath() + "\\drivers\\chromedriver.exe");
 //                ChromeOptions options = new ChromeOptions();
 //                options.addArguments("--headless");
-//                WEBDRIVER = new ChromeDriver(options);
+                WEBDRIVER = new ChromeDriver();
                 break;
             case "Firefox":
                 System.setProperty("webdriver.gecko.driver", Utilities.getProjectPath() + "\\drivers\\geckodriver.exe");
