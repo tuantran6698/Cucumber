@@ -6,9 +6,7 @@
     </listeners>
     <test verbose="2" preserve-order="true" name="C:\Users\tdtuan\Desktop\cucumber\PraticeCucumber\src\java">
         <classes>
-            <class name="Runners.testCoreRun"></class>
-            <class name="Runners.orderProductRun"></class>
-            <class name="Runners.CartTestRun"></class>
+            <class name="Runners.RunnersAll"></class>
         </classes>
     </test>
-    </suite>
+</suite>
