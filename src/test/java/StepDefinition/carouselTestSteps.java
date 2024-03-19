@@ -15,10 +15,7 @@ public class carouselTestSteps {
     private Locator nextBtn = new Locator (How.XPATH,"//button[@data-bi-ecn='Carousel Forward']");
     private Locator backBtn = new Locator (How.XPATH,"//button[@data-bi-ecn='Carousel Back']");
 
-    @AfterTest
-    public void EndSession() {
-            quit();
-    }
+
     @Given("User access to the website")
     public void user_access_to_the_website() {
 
@@ -37,6 +34,7 @@ public class carouselTestSteps {
     public void user_can_see_the_slide_has_been_changed() {
         waitForElement(slide2.getBy(),25);
         checkControlExistz(slide2.getBy());
+        quit();
     }
 
     @When("User click on the next button")
@@ -50,6 +48,7 @@ public class carouselTestSteps {
     public void user_can_see_the_slide_has_been_changed_to_the_next_slide() {
         waitForElement(slide2.getBy(),25);
         checkControlExistz(slide2.getBy());
+        quit();
     }
     @When("User click on the back button")
     public void User_click_on_the_back_button() {
@@ -63,5 +62,6 @@ public class carouselTestSteps {
     @Then("User can see the slide has been changed to last slide")
     public void user_can_see_the_slide_has_been_changed_to_the_last_slide() {
         checkControlExistz(slide1.getBy());
+        quit();
     }
 }
