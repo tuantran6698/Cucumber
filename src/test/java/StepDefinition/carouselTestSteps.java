@@ -19,7 +19,7 @@ public class carouselTestSteps {
     @Given("User access to the website")
     public void user_access_to_the_website() {
 
-        openBrowser("Edge");
+        openBrowser("chrome");
         navigateTo("https://www.microsoft.com/vi-vn/");
         maximizeWindow();
     }
