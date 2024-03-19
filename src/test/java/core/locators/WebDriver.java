@@ -23,7 +23,8 @@ public class WebDriver {
                 System.setProperty("webdriver.gecko.driver", Utilities.getProjectPath() + "\\drivers\\geckodriver.exe");
                 WEBDRIVER = new FirefoxDriver();
                 break;
-            case "Egde":
+            case "Edge":
+                System.setProperty("webdriver.edge.driver", Utilities.getProjectPath() + "\\drivers\\msedgedriver.exe");
                 WEBDRIVER = new EdgeDriver();
                 break;
             case "IE":

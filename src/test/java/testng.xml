@@ -4,7 +4,7 @@
     <listeners>
         <listener class-name="Runners.NGTestListener"></listener>
     </listeners>
-    <test verbose="2" preserve-order="true" name="C:\Users\tdtuan\Desktop\cucumber\PraticeCucumber\src\java">
+    <test verbose="2" preserve-order="true" name="C:\Users\PC\Cucumber\src\java">
         <classes>
             <class name="Runners.RunnersAll"></class>
         </classes>
