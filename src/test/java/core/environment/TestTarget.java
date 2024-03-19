@@ -15,6 +15,9 @@ public enum TestTarget {
         if ("firefox".equalsIgnoreCase(mode)) {
             return TestTarget.FIREFOX;
         }
+        if ("edge".equalsIgnoreCase(mode)) {
+            return TestTarget.EDGE;
+        }
         if ("native".equalsIgnoreCase(mode)) {
             return TestTarget.NATIVE;
         }
