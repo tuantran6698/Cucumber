@@ -1,6 +1,5 @@
 package StepDefinition;
 import core.locators.Locator;
-import core.locators.WebDriver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -19,9 +18,8 @@ public class carouselTestSteps {
     @Given("User access to the website")
     public void user_access_to_the_website() {
 
-        openBrowser("chrome");
+        openBrowser("Chrome");
         navigateTo("https://www.microsoft.com/vi-vn/");
-        maximizeWindow();
     }
 
     @When("User wait till the carousel change slide")
