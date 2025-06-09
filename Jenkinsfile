@@ -16,8 +16,8 @@ pipeline {
           }
         }
       }
-
-     post {
+    }
+        post {
     success {
         sh '''
         curl -X POST "https://api.telegram.org/bot8001450512:AAH70LpPeuFNjfJ2TpJrXHh9TTexfV82KIg/sendMessage" \
@@ -33,6 +33,5 @@ pipeline {
         '''
     }
 }
-    }
   }
 }
