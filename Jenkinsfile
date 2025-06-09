@@ -20,4 +20,7 @@ pipeline {
     }
 
   }
+  post{success{sh'curl -X POST -H "Content-Type: application/json" -d \ "{"chat_id":"2020319127",\"text\":\"Build Successful!\",\"disable_notification\":false}" https://api.telegram.org/bot8001450512:AAH70LpPeuFNjfJ2TpJrXHh9TTexfV82KIg/sendMessage'} 
+        failure{sh'curl -X POST -H "Content-Type: application/json" -d \ "{"chat_id":"2020319127",\"text\":\"Build Failed!\",\"disable_notification\":false}" https://api.telegram.org/bot8001450512:AAH70LpPeuFNjfJ2TpJrXHh9TTexfV82KIg/sendMessage'}
+  }
 }

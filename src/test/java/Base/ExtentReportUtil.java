@@ -9,9 +9,6 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 
-/**
- * Created by Karthik on 21/09/2019.
- */
 
 
 public class ExtentReportUtil extends BaseUtil {
