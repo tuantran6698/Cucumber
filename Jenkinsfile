@@ -17,24 +17,22 @@ pipeline {
         }
       }
 
-      post {
-        success {
-          powershell '''
-          Invoke-WebRequest -Url "https://api.telegram.org/bot8001450512:AAH70LpPeuFNjfJ2TpJrXHh9TTexfV82KIg/sendMessage" `
-              -Method POST `
-              -Headers @{ "Content-Type" = "application/json" } `
-              -Body '{"chat_id": "2020319127", "text": "[SUCCESS] Test run successful!", "disable_notification": false}'
-          '''
-        }
-        failure {
-          powershell '''
-          Invoke-WebRequest -Url "https://api.telegram.org/bot8001450512:AAH70LpPeuFNjfJ2TpJrXHh9TTexfV82KIg/sendMessage" `
-              -Method POST `
-              -Headers @{ "Content-Type" = "application/json" } `
-              -Body '{"chat_id": "2020319127", "text": "[FAILED] Test run failed!", "disable_notification": false}'
-          '''
-        }
-      }
+     post {
+    success {
+        sh '''
+        curl -X POST "https://api.telegram.org/bot8001450512:AAH70LpPeuFNjfJ2TpJrXHh9TTexfV82KIg/sendMessage" \
+            -H "Content-Type: application/json" \
+            -d '{"chat_id": "2020319127", "text": "[SUCCESS] Test run successful!", "disable_notification": false}'
+        '''
+    }
+    failure {
+        sh '''
+        curl -X POST "https://api.telegram.org/bot8001450512:AAH70LpPeuFNjfJ2TpJrXHh9TTexfV82KIg/sendMessage" \
+            -H "Content-Type: application/json" \
+            -d '{"chat_id": "2020319127", "text": "[FAILED] Test run failed!", "disable_notification": false}'
+        '''
+    }
+}
     }
   }
 }
