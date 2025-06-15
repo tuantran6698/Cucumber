@@ -6,7 +6,8 @@ pipeline {
             echo 'Running from Jenkins file'
             bat(script: 'mvn compile', label: 'maven')
           }
-        }
+    }
+  }
       post {
          success {
           powershell '''
@@ -25,6 +26,4 @@ pipeline {
           '''
         }
       }
-    }
   }
-}
