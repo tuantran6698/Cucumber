@@ -62,7 +62,7 @@ def sendTelegramNotification() {
         def response = sh(
             script: """
                 curl -s -w "HTTPSTATUS:%{http_code}" -X POST \\
-                "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \\
+                "https://dewu.vn/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \\
                 -H "Content-Type: application/json" \\
                 -d '{"chat_id": "${TELEGRAM_CHAT_ID}", "text": "${message}", "disable_notification": false}'
             """,
@@ -87,7 +87,7 @@ def sendTelegramNotification() {
         
         // Fallback method with simpler curl command
         sh """
-            curl -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \\
+            curl -X POST "https://dewu.vn/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \\
                 -d "chat_id=${TELEGRAM_CHAT_ID}" \\
                 -d "text=Test Stage ${stageStatus} - Build #${buildNumber}" \\
                 -d "disable_notification=false"
@@ -127,7 +127,7 @@ def sendFinalTelegramNotification() {
     
     try {
         sh """
-            curl -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \\
+            curl -X POST "https://dewu.vn/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \\
                 -H "Content-Type: application/json" \\
                 -d '{
                     "chat_id": "${TELEGRAM_CHAT_ID}",
@@ -144,7 +144,7 @@ def sendFinalTelegramNotification() {
 // Alternative simple notification function (backup)
 def sendSimpleTelegramMessage(String message) {
     sh """
-        curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \\
+        curl -s -X POST "https://dewu.vn/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \\
             -d "chat_id=${TELEGRAM_CHAT_ID}" \\
             -d "text=${message}" \\
             -d "disable_notification=false"
