@@ -2,7 +2,6 @@ pipeline {
   agent any
   stages {
     stage('Test') {
-        stage('Maven') {
           steps {
             echo 'Running from Jenkins file'
             bat(script: 'mvn compile', label: 'maven')
