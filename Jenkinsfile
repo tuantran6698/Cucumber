@@ -7,7 +7,7 @@ pipeline {
         stage('Maven') {
           steps {
             echo 'Running from Jenkins file'
-            Execute shell(script: 'mvn compile', label: 'maven')
+            sh(script: 'mvn compile', label: 'maven')
           }
         }
 
@@ -19,14 +19,14 @@ pipeline {
       }
       post {
         success {
-          Execute shell '''
+          sh '''
           curl -X POST "https://api.telegram.org/bot8001450512:AAH70LpPeuFNjfJ2TpJrXHh9TTexfV82KIg/sendMessage" \
               -H "Content-Type: application/json" \
               -d '{"chat_id": "2020319127", "text": "[SUCCESS] Test run successful!", "disable_notification": false}'
           '''
         }
         failure {
-          Execute shell '''
+          sh '''
           curl -X POST "https://api.telegram.org/bot8001450512:AAH70LpPeuFNjfJ2TpJrXHh9TTexfV82KIg/sendMessage" \
               -H "Content-Type: application/json" \
               -d '{"chat_id": "2020319127", "text": "[FAILED] Test run failed!", "disable_notification": false}'
