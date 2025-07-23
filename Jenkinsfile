@@ -10,20 +10,18 @@ pipeline {
   }
       post {
          success {
-          powershell '''
-          Invoke-WebRequest -Uri "https://api.telegram.org/bot8001450512:AAH70LpPeuFNjfJ2TpJrXHh9TTexfV82KIg/sendMessage" `
-              -Method POST `
-              -Headers @{ "Content-Type" = "application/json" } `
-              -Body '{"chat_id": "2020319127", "text": "[SUCCESS] Test run successful!", "disable_notification": false}'
-          '''
+          discordSend(
+            description: 'Test run completed successfully!',
+            webhookURL: 'https://discordapp.com/api/webhooks/1397652462956969984/LllxBfE0VaO6Ecb7l_ks565UJ79f9ZazfD8bpKUkFcD2IhSoIdFvucgWroF8AgxDx7O8',
+            color: 'GREEN'
+          )
         }
         failure {
-          powershell '''
-          Invoke-WebRequest -Uri "https://api.telegram.org/bot8001450512:AAH70LpPeuFNjfJ2TpJrXHh9TTexfV82KIg/sendMessage" `
-              -Method POST `
-              -Headers @{ "Content-Type" = "application/json" } `
-              -Body '{"chat_id": "2020319127", "text": "[FAILED] Test run failed!", "disable_notification": false}'
-          '''
+          discordSend(
+            description: 'Test run failed!',
+            webhookURL: 'https://discordapp.com/api/webhooks/1397652462956969984/LllxBfE0VaO6Ecb7l_ks565UJ79f9ZazfD8bpKUkFcD2IhSoIdFvucgWroF8AgxDx7O8',
+            color: 'RED'
+          )
         }
       }
   }
