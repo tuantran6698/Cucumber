@@ -4,7 +4,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.support.How;
-import org.testng.annotations.AfterTest;
 
 import static core.common.BuiltInAction.*;
 import static core.locators.WebDriver.openBrowser;

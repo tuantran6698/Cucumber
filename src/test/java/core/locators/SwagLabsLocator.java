@@ -1,5 +1,4 @@
 package core.locators;
-import core.locators.Locator;
 import org.openqa.selenium.support.How;
 
 public class SwagLabsLocator {
