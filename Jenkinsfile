@@ -12,14 +12,14 @@ pipeline {
          success {
           discordSend(
             description: 'Test run completed successfully!',
-            webhookURL: 'https://discordapp.com/api/webhooks/1397652462956969984/LllxBfE0VaO6Ecb7l_ks565UJ79f9ZazfD8bpKUkFcD2IhSoIdFvucgWroF8AgxDx7O8',
+            webhookURL: 'https://discord.com/api/webhooks/1402766368671006830/7T6gYZqw2Y0VLBAaUwR7iVfyc2bWjREybWujapooFCXyaueApBpHXH1QSVcfqXO8Y5MJ',
             successful: true
           )
         }
         failure {
           discordSend(
             description: 'Test run failed!',
-            webhookURL: 'https://discordapp.com/api/webhooks/1397652462956969984/LllxBfE0VaO6Ecb7l_ks565UJ79f9ZazfD8bpKUkFcD2IhSoIdFvucgWroF8AgxDx7O8',
+            webhookURL: 'https://discord.com/api/webhooks/1402766368671006830/7T6gYZqw2Y0VLBAaUwR7iVfyc2bWjREybWujapooFCXyaueApBpHXH1QSVcfqXO8Y5MJ',
             successful: false
           )
         }
